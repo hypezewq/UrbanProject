@@ -43,7 +43,7 @@ class RunnerTest(unittest.TestCase):
             logging.info('"test_walk" выполнен успешно')
         except ValueError:
             logging.warning("Неверная скорость для Runner")
-            raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+            raise ValueError
 
     def test_run(self):
         try:
@@ -54,7 +54,7 @@ class RunnerTest(unittest.TestCase):
             logging.info('"test_run" выполнен успешно')
         except TypeError:
             logging.warning("Неверный тип данных для объекта Runner")
-            raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+            raise TypeError
 
     def test_challenge(self):
         runner1 = Runner("")
